@@ -1,0 +1,50 @@
+@use 'base/variable' as v;
+@use 'base/mixins' as mix;
+
+.header{
+    background-color: v.$verde;
+
+    h1 {
+        color: v.$blanco;
+        @include mix.media-query(v.$tablet){
+            margin: 0;
+        }
+
+    }
+
+    .contenido-header{
+        @include mix.media-query(v.$tablet){
+            padding: 2rem;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        padding: 1rem;
+    }
+}
+
+.navegacion-principal{
+    @include mix.media-query(v.$tablet){
+        display: flex;
+        gap: 2rem;
+    }
+    a {
+        display: block;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: v.$blanco;
+        font-size: 2.4rem;
+        @include mix.media-query(v.$tablet){
+            margin: 0;
+        }
+
+        &:hover{
+            color: v.$amarillo;
+        }
+    }
+}
+
+// .pruebita{
+//     @include mix.heading(v.$verde,true);
+// }
+

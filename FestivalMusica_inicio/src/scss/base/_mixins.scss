@@ -1,0 +1,24 @@
+@use 'variable' as var;
+// @mixin heading($color: black,$border-radius:false){
+    //     text-transform: uppercase;
+    //     font-size: 2.4rem;
+    //     color: $color;
+    //     letter-spacing: 2px;
+    //     background-color: black;
+    //     text-align: center;
+//     @if($border-radius){
+    //         border-radius: 1rem;
+    //     }
+    // }
+
+@mixin media-query ($tamanio:var.$telefono) {
+    @media(min-width: $tamanio){
+        @content;
+    }
+}
+
+@mixin grid($columnas:0,$gap){
+ display: grid;
+ grid-template-columns: repeat($columnas,1fr);
+ gap: $gap;
+}
