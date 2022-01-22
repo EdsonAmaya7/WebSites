@@ -66,4 +66,5 @@ exports.css = css;
 exports.imagenes = imagenes;
 exports.imagenesWebp = imagenesWebp;
 exports.imagenesAvif = imagenesAvif;
+exports.watch = watcher;
 exports.watcher = parallel(imagenes,imagenesWebp, imagenesAvif,watcher);
